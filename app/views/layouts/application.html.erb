@@ -8,6 +8,9 @@
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
+      <% flash.each do |symbol, element| %>
+        <%= content_tag(:div, element, class: "alert alert-#{symbol}") %>
+      <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
