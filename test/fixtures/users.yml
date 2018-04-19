@@ -1,15 +1,37 @@
-# # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-#
-# コメントアウトした
-# one:
-#   name: MyString
-#   email: MyString
-#
-# two:
-#   name: MyString
-#   email: MyString
-
 tomohiroo:
   name: Tomohiro Ueda
   email: tomohiro@example.com
   password_digest: <%= User.digest('password') %>
+  admin: true
+
+ueda:
+  name: Ueda Tomohiro
+  email: ueda@example.com
+  password_digest: <%= User.digest('password') %>
+
+michael:
+  name: Michael Example
+  email: michael@example.com
+  password_digest: <%= User.digest('password') %>
+
+archer:
+  name: Sterling Archer
+  email: duchess@example.gov
+  password_digest: <%= User.digest('password') %>
+
+lana:
+  name: Lana Kane
+  email: hands@example.gov
+  password_digest: <%= User.digest('password') %>
+
+malory:
+  name: Malory Archer
+  email: boss@example.gov
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
