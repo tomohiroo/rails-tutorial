@@ -18,6 +18,10 @@ group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'rails-erd', github: 'ready4god2513/rails-erd', branch: 'rails-4.2-support-fix'
+  gem 'annotate'
+  gem 'pry-rails'
+  gem 'pry-coolline'
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -38,5 +42,3 @@ group :production do
   gem 'pg', '0.18.4'
 end
 
-# Windows環境ではtzinfo-dataというgemを含める必要があります
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
