@@ -22,3 +22,5 @@
 
 .byebug_history
 spring/*.pid
+
+/public/uploads
