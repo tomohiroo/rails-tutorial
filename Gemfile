@@ -25,6 +25,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-coolline'
   gem 'pry-byebug'
+  gem 'bullet'
+  gem "uniform_notifier"
+  gem 'slack-notifier' 
 end
 
 group :development do
